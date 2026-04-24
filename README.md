@@ -866,28 +866,6 @@ curl http://localhost:3001/api/jobs/{JOB_ID}
 curl http://localhost:3001/api/jobs/{JOB_ID}/events
 ```
 
-You'll see: APPLIED → PROMOTED → PROMOTED → EXITED → PROMOTED (cascade).
-
----
-
-## Production Checklist
-
-- [ ] Set `NODE_ENV=production`
-- [ ] Use secrets manager for `DATABASE_URL` (AWS Secrets, HashiCorp Vault)
-- [ ] Enable SSL for database connections
-- [ ] Add request rate limiting middleware
-- [ ] Set up health checks for container orchestration (Kubernetes, ECS)
-- [ ] Add request logging to centralized logging system (CloudWatch, DataDog)
-- [ ] Monitor database pool exhaustion
-- [ ] Set cascade tick interval based on traffic patterns (default 5 min is conservative)
-- [ ] Add metrics/observability (Prometheus)
-- [ ] Enable CORS only for known domains
-- [ ] Add API key authentication for jobs endpoints
-
----
-
-## License
-
 MIT
 
 ---
