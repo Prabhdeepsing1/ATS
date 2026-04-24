@@ -14,7 +14,7 @@ export const Header = () => {
         </div>
         <nav className="header-nav">
           <Link to="/" className="nav-link">Dashboard</Link>
-          <a href="https://github.com" className="nav-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Prabhdeepsing1/ATS/blob/main/README.md" className="nav-link" target="_blank" rel="noopener noreferrer">
             Docs
           </a>
         </nav>

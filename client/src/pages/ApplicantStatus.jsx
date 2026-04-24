@@ -254,7 +254,7 @@ export const ApplicantStatus = () => {
               {isActive && (
                 <>
                   <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                    <h4 style={{ marginBottom: 'var(--spacing-md)' }}>✅ You're Active!</h4>
+                    <h4 style={{ marginBottom: 'var(--spacing-md)' }}>✅ You\'re Active!</h4>
                     <p className="text-muted" style={{ fontSize: '14px', marginBottom: 'var(--spacing-md)' }}>
                       You've been selected to move forward in our hiring process. Please acknowledge your status
                       below to confirm you're ready to proceed.
@@ -280,12 +280,12 @@ export const ApplicantStatus = () => {
                 <>
                   <div style={{ marginBottom: 'var(--spacing-lg)' }}>
                     <h4 style={{ marginBottom: 'var(--spacing-md)' }}>
-                      {isDecayed ? '⏰ You Were Moved Back' : '⏳ You're in the Queue'}
+                      {isDecayed ? "⏰ You Were Moved Back" : "⏳ You're in the Queue"}
                     </h4>
                     <p className="text-muted" style={{ fontSize: '14px', marginBottom: 'var(--spacing-md)' }}>
                       {isDecayed
                         ? "You didn't respond to a previous promotion, so you've been moved back in the queue. Check back soon for new opportunities."
-                        : 'We have more candidates ahead of you. We'll reach out when it's your turn!'}
+                        : "We have more candidates ahead of you. We'll reach out when it's your turn!"}
                     </p>
                     <p className="text-muted" style={{ fontSize: '13px' }}>
                       Queue Position: <strong>#{applicant.queue_position}</strong>

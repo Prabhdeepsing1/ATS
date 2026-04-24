@@ -25,5 +25,3 @@ services:
   db:
     # Expose port for direct database inspection
     # psql postgres://queuegate:queuegate@localhost:5432/queuegate
-    ports:
-      - "5432:5432"
