@@ -1,0 +1,29 @@
+# Development overrides for docker-compose.yml
+# Use with: docker compose -f docker-compose.yml -f docker-compose.override.yml up
+
+version: '3.8'
+
+services:
+  server:
+    # Mount source code for hot-reload
+    volumes:
+      - ./server/src:/app/src
+    environment:
+      NODE_ENV: development
+    command: npx nodemon src/index.js
+
+  client:
+    # Mount source code for hot-reload with React Scripts
+    volumes:
+      - ./client/src:/app/src
+      - ./client/public:/app/public
+    environment:
+      REACT_APP_API_URL: http://localhost:3001/api
+      WATCHPACK_POLLING: "true"
+    command: npm start
+
+  db:
+    # Expose port for direct database inspection
+    # psql postgres://queuegate:queuegate@localhost:5432/queuegate
+    ports:
+      - "5432:5432"

@@ -1,0 +1,16 @@
+node_modules/
+*.log
+.env
+.env.local
+.DS_Store
+dist/
+build/
+coverage/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.env.production.local
+.env.test.local
+postgres_data/
